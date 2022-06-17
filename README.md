@@ -9,7 +9,6 @@ Access my Project at [Github.com](https://github.com/haris-ramzan/github-user-se
 - [Technologies](#technologies)
 - [Setup](#setup)
 - [Approach](#approach)
-- [Status](#status)
 - [License](#license)
 
 ## About The App
@@ -25,9 +24,6 @@ I used `Reactjs`, `Css`, `HTML`, `styled-component`, `react-router-dom`
 
 ## Approach
 I create my app from create-react-app boilerplate. I used styled-components for component creation and css. I also demonstrate the `JSS` styles in my code that we can also use JSS styles in our app. Apart from this, I used `react-router-dom(web)` for two pages navigation. In this app there is two pages one is specify for Search the user by `username` after navigate to result screen by clicking `Search` Button it shows the result of the `Users`.
-
-## Status
-I have touch the all related things you have mentioned in email. If i left something and not cover according to your email please convey me!
 
 ## License
 
