@@ -1,16 +1,23 @@
-import { render, screen } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import React from 'react'
 import '@testing-library/jest-dom'
 
+import { SearchPage } from './pages/SearchPage';
 import { Search } from './components/Search';
-test('renders learn react link', () => {
+import { Button } from './components/style';
+test('renders SearchPage Title Text', () => {
   render(<SearchPage />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const textBy = screen.getByText(/Search GitHub User/);
+  expect(textBy).toBeInTheDocument();
 });
-
-test('shows proper heading when rendered', () => {
-  const {getByText} = render(Search, {onClick: ()=> {}})
-
-  expect(getByText('Hello World!')).toBeInTheDocument()
+test('renders Button not to be disabled', () => {
+  render(<Button />);
+  expect(screen.getByRole('button')).not.toBeDisabled()
+});
+test('renders Button Text', () => {
+  render(<Search />);
+  fireEvent.click(screen.getByText('Search'))
+});
+test('clicking the button to move next page', () => {
+  render(<Button onClick={()=> {history.push('/User')}} />);
 })
